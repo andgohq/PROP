@@ -20,10 +20,14 @@
    - set `baseUrl` to `http://localhost:5004`
    - set `apiKey` to `DUMMY`
    - set `fileSizeLimit` to the file size limit
-5. `./dc_script.sh`
-6. wait for the script to finish
-7. open the website on `https://localhost:4200/`
-8. make changes to the frontend/backend code. Hot reload is enabled
+5. make sure Docker is running
+6. `PYTHON=python3.8 ./dc_script.sh`
+   - **NOTES:** 
+     - this script will prune ALL existing Docker volumes, images and containers
+     - it is necessary to set PYTHON=python3.8 so that the dc_script runs correctly
+7. wait for the script to finish
+8. open the website on `https://localhost:4200/`
+9.  make changes to the frontend/backend code. Hot reload is enabled
 
 NOTE:
 - If you want to run the frontend/backend separately, you can do so by running `sudo ./dc_script.sh --frontend-only` or `sudo ./dc_script.sh --backend-only`
